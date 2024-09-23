@@ -9,11 +9,11 @@ const rollBtn = document.querySelector('.btn--roll');
 const holdBtn = document.querySelector('btn--hold');
 const newGameBtn = document.querySelector('btn--new');
 
-// Randomizing the dice
-const randomNum = Math.floor(Math.random() * 6 + 1);
-console.log(randomNum);
-
-// Roll the dice
+// Randomize and roll the dice
 const rollDice = function () {
+  const randomNum = Math.floor(Math.random() * 6 + 1);
   diceImgEl.src = `dice-${randomNum}.png`;
+  console.log(randomNum);
 };
+
+rollBtn.addEventListener('click', rollDice);
